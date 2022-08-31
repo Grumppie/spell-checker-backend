@@ -18,6 +18,8 @@ mongoose.connect(process.env.URL, {
 app.use('/api/get', getObject)
 app.use('/api/add', addLog)
 
-app.listen(4000, () => {
+const port = process.env.PORT || 4000
+
+app.listen(port, () => {
     console.log('Server started on 4000')
 })
